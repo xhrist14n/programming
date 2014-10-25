@@ -21,6 +21,8 @@ int main()
 
     float num;
     float max=0;
+    float prom=0;
+    int cont=0;
     float min=9999999;
     while(flag){
         file>>num;
@@ -30,9 +32,14 @@ int main()
         if(min>num){
             min=num;
         }
+        prom+=num;
+        cont++;
         flag=!file.eof();
     }
 
+    prom=prom/cont;
+
+    cout<<"Numero Promedio: "<<prom<<endl;
     cout<<"Numero Mayor: "<<max<<endl;
     cout<<"Numero Menor: "<<min<<endl;
 
